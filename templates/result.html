@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <div class="result-content">
+            <img src="{{ url_for('static', filename='upload/' + image_filename) }}" alt="Uploaded Image" class="uploaded-image">
+            <div class="prediction-info">
+                <p class="prediction-text">The predicted class for the uploaded image is:</p>
+                <h2 class="prediction-label">{{ predicted_label }}</h2>
+                <a href="/" class="go-back-button">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
